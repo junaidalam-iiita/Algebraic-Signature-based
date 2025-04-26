@@ -1,9 +1,9 @@
 # THIS IS ALICE
 
 #!/bin/bash
-MY_PORT=22231
+MY_PORT=22221
 BOB_IP="172.17.15.7"
-BOB_PORT=22232
+BOB_PORT=22222
 counter=1
 
 trap "exit" SIGINT
@@ -22,7 +22,7 @@ while true; do
 	socat - TCP-LISTEN:$MY_PORT,reuseaddr > POP.bin
 
 	# Run VerifyProof: takes POP.bin and other necessary files as input and prints the result
-	res=$(./DataAudit VerifyProof Params.bin POP.bin metaData.bin alpha.bin ChalStr.txt)
+	res=$(./DataAudit VerifyProof Params.bin POP.bin metaData.bin ChalStr.txt)
 	if [ $res -eq 1 ]; then
 		echo "VERIFICATION SUUCCESSFUL !"
 		paplay Success_Msg.ogg
