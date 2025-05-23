@@ -17,12 +17,14 @@ For Demostration Purpose
         a. DataAudit (main s/w)
         b. Configuration.txt   (configuration file)
         c. SetupTagGen.sh (Script to generate key materials and metadata)
+        d. PortFree.sh (Script to free already bind port)
     2. Initial Content of Auditor (Alice):-
         a. DataAudit (main s/w)
         b. Configuration.txt   (configuration file)
         c. Success_Msg.ogg (Success message audio file)
         d. Failure_Msg.ogg (Failure message audio file)
         e. Alice.sh (The main Auditor Script)
+        f. PortFree.sh (Script to free already bind port)
     3. Initial Content of Auditee / Storage (Bob):-
         a. Data_File
         b. Backup of the Data_file
@@ -52,3 +54,4 @@ i.e. for Admin-Cloud : chmod +x DataAudit SetupTagGen.sh
         b. blocksize = 2000; 
         c. attack_proportion = 0.01 (may reduce also)
     16. Step-13: Attack should be immediately detected by Alice
+    17. Restore Data_File as cp <Backup of the Data_file> <Data_file>
